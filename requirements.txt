@@ -1,0 +1,6 @@
+Django==4.2.2
+django-environ==0.10.0
+django-filter==23.2
+django-init-admin-command==0.1.0
+djangorestframework==3.14.0
+requests==2.31.0

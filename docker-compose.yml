@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  app:
+    image: app-service:1.0
+    build: .
+    restart: always
+    working_dir: /home/app
+    container_name: app
+    volumes:
+      - ./:/home/app/
+    networks:
+      - network-app
+    ports:
+      - ${PORT}:${PORT}
+    command: >
+      bash -c "python manage.py makemigrations logistics &&
+      python manage.py migrate &&
+      python manage.py initadmin &&
+      python manage.py runserver 0.0.0.0:${PORT}"
+       
+networks:
+  network-app:
+    driver: bridge
+    name: network-app
