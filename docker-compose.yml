@@ -7,7 +7,7 @@ services:
     working_dir: /home/app
     container_name: app
     volumes:
-      - ./:/home/app/
+      - ./db:/home/app/db
     networks:
       - network-app
     ports:

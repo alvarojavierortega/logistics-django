@@ -6,3 +6,4 @@
  FROM python:slim
  WORKDIR /home/app
  COPY --from=dependency /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages/
+ COPY . .
