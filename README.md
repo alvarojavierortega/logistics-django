@@ -26,6 +26,7 @@ or create a Python venv and install the requirements, and run the following comm
 python manage.py makemigrations logistics 
 python manage.py migrate 
 python manage.py initadmin
+python manage.py collectstatic 
 python manage.py runserver 0.0.0.0:8000
 ```
 
